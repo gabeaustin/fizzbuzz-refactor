@@ -1,35 +1,23 @@
+
 var runFizzBuzz = function(){
-  var input = prompt("Enter in a number.");
-  input = +input;
-  fizzBuzz(input);
-} 
+	var input = prompt("Enter in a number.");
+	input = +input;
+	while (input === NaN || input % 1 != 0) {
+		var input = prompt("That was not a number, please enter a number.")
+	};
+	fizzBuzz(input);
+}	
 
 var fizzBuzz = function(num){
-  for (i = 0; i <= num; i++) {
-    if (i%3 === 0 && i%5 === 0){
-      alert('fizzbuzz');
-    } else if (i%3 === 0) {
-      alert('fizz'); 
-    } else if (i%5 === 0) {
-      alert('buzz');
-    } else {
-      alert(i);
-    }
-  }
+	for (i = 0; i <= num; i++) {
+		if (i%3 === 0 && i%5 === 0){
+			document.write('fizzbuzz');
+		} else if (i%3 === 0) {
+			document.write('fizz'); 
+		} else if (i%5 === 0) {
+			document.write('buzz');
+		} else {
+			document.write(i);
+		}
+	}
 };
-
-// document.write will print the user's response 
-// to the screen.
-// I think this may complete some of the task:
-// var runFizzBuzz = function(){
-//   var input = prompt("Enter in a number.");
-  
-//   if (isNaN(input) || input % 1 !=0) {
-//     document.write("This is not a valid number.  Please supply a valid number.");
-//   } else {
-//     document.write("This is a number.");
-//   }
-  
-//   input = +input;
-//   fizzBuzz(input);
-// };
